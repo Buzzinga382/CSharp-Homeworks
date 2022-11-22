@@ -7,10 +7,10 @@ int number = int.Parse(Console.ReadLine());
 
 int count = 1;
 
-while(count <= number)
+while (count <= number)
 {
     int rest = count % 2;
-    if(rest == 0)
+    if (rest == 0)
     {
         Console.Write(count);
         Console.Write(" ");
