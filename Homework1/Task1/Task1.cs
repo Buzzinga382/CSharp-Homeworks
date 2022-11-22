@@ -6,20 +6,28 @@ Console.WriteLine("Please enter 2 numbers:");
 int number1 = int.Parse(Console.ReadLine());
 int number2 = int.Parse(Console.ReadLine());
 
-if (number1 > number2)
+if (number1 == number2)
 {
-    Console.Write(number1);
-    Console.WriteLine(" bigger");
-
-    Console.Write(number2);
-    Console.WriteLine(" smaller");
+    Console.WriteLine("Numbers are equal");
 }
 
 else
 {
-    Console.Write(number2);
-    Console.WriteLine(" bigger");
+    if (number1 > number2)
+    {
+        Console.Write(number1);
+        Console.WriteLine(" bigger");
 
-    Console.Write(number1);
-    Console.WriteLine(" smaller");
+        Console.Write(number2);
+        Console.WriteLine(" smaller");
+    }
+
+    else
+    {
+        Console.Write(number2);
+        Console.WriteLine(" bigger");
+
+        Console.Write(number1);
+        Console.WriteLine(" smaller");
+    }
 }
