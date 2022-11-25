@@ -11,11 +11,13 @@ bool isParsed = int.TryParse(Console.ReadLine(), out int number);
 if(!isParsed)
 {
     Console.WriteLine("Incorrect input");
+    return;
 }
 
 if(number > 999 | number < 100)
 {
     Console.WriteLine("Incorrect input");
+    return;
 }
 
 int thirdDigit = number % 10;
