@@ -20,7 +20,7 @@ if (number < 1 | number > 7)
     return;
 }
 
-if(number == 6 | number == 7)
+if (number == 6 | number == 7)
 {
     Console.WriteLine("Yes, it's a day off");
 }
