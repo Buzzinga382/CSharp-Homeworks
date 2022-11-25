@@ -8,19 +8,19 @@ Console.WriteLine("Please enter 3-digit number");
 
 bool isParsed = int.TryParse(Console.ReadLine(), out int number);
 
-if(!isParsed)
+if (!isParsed)
 {
     Console.WriteLine("Incorrect input");
     return;
 }
 
-if(number > 999 | number < 100)
+if (number > 999 | number < 100)
 {
     Console.WriteLine("Incorrect input");
     return;
 }
 
 int thirdDigit = number % 10;
-int secondDigit = ((number - thirdDigit)/10) % 10;
+int secondDigit = ((number - thirdDigit) / 10) % 10;
 
 Console.WriteLine($"Second digit is {secondDigit}");
