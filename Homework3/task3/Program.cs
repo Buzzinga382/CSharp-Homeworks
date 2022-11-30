@@ -14,7 +14,7 @@ PrintArray(result);
 int[] GetСubedArray(int[] array)
 {
     int index = 0;
-    while(index < array.Length)
+    while (index < array.Length)
     {
         array[index] = (int)(Math.Pow(index + 1, 3));
         index++;
@@ -37,7 +37,7 @@ int[] GetArray(int num)
 {
     int[] array = new int[num];
     int index = 0;
-    while(index < array.Length)
+    while (index < array.Length)
     {
         array[index] = index + 1;
         index++;
