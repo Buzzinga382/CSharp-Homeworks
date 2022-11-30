@@ -24,7 +24,7 @@ int[] straightArray = GetStraightArray(num, count);
 
 int check = CheckEquality(reverseArray, straightArray);
 
-if(check == 1)
+if (check == 1)
 {
     Console.WriteLine("Yes, it's a palindrome");
 }
@@ -44,13 +44,13 @@ else
 
 // Methods:
 
-int CheckEquality(int[]array1, int[]array2)
+int CheckEquality(int[] array1, int[] array2)
 {
     int index = 0;
     int check = -1;
-    while(index < array1.Length)
+    while (index < array1.Length)
     {
-        if(array1[index] == array2[index])
+        if (array1[index] == array2[index])
         {
             check = 1;
             index++;
