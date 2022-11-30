@@ -2,6 +2,24 @@
 A (3,6,8); B (2,1,-7), -> 15.84
 A (7,-5, 0); B (1,-1,9) -> 11.53 */
 
+int x1 = InputNumber();
+int y1 = InputNumber();
+int z1 = InputNumber();
+
+int x2 = InputNumber();
+int y2 = InputNumber();
+int z2 = InputNumber();
+
+double result = GetDistance(x1, y1, z1, x2, y2, z2);
+
+Console.WriteLine($"Distance between two points: {result}");
+
+
+
+
+
+// Methods:
+
 int InputNumber()
 {
     Console.WriteLine("Please enter some number");
@@ -17,18 +35,6 @@ int InputNumber()
         return -1;
     }
 }
-
-int x1 = InputNumber();
-int y1 = InputNumber();
-int z1 = InputNumber();
-
-int x2 = InputNumber();
-int y2 = InputNumber();
-int z2 = InputNumber();
-
-double result = GetDistance(x1, y1, z1, x2, y2, z2);
-
-Console.WriteLine($"Distance between two points: {result}");
 
 double GetDistance(int x1, int y1, int z1, int x2, int y2, int z2)
 {
