@@ -6,10 +6,10 @@ testArray[2] = 7;
 testArray[3] = 8;
 testArray[4] = 9;
 
-//int[] reverseArray = GetReverseArray(testArray);
+int[] reverseArray = GetReverseArray(testArray);
 
 PrintArray(testArray);
-//PrintArray(reverseArray);
+PrintArray(reverseArray);
 
 void PrintArray(int[] arr)
 {
@@ -27,7 +27,7 @@ int[] GetReverseArray(int[] arr)
     int index = 0;
     int size = arr.Length;
     int reverseIndex = size - 1;
-    int[] revArr = arr;
+    int[] revArr = new int[arr.Length];
     while (index < size)
     {
         revArr[index] = arr[reverseIndex];
