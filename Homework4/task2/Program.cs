@@ -5,9 +5,9 @@
 
 Console.WriteLine("Please enter some number");
 
-bool isParse1 = int.TryParse(Console.ReadLine(), out int num);
+bool isParse = int.TryParse(Console.ReadLine(), out int num);
 
-if (!isParse1)
+if (!isParse)
 {
     Console.WriteLine("Incorrect input");
     return;
@@ -34,7 +34,7 @@ int Count(int num)
 {
     int count = 0;
 
-    if(num < 0)
+    if (num < 0)
     {
         num = -num;
     }
@@ -53,7 +53,7 @@ int[] ArrayOfNumbers(int num, int count)
     int rest = 0;
     int index = 0;
 
-    if(num < 0)
+    if (num < 0)
     {
         num = -num;
     }
