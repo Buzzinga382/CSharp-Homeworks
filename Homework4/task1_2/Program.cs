@@ -15,7 +15,7 @@ if (!isParse1)
 
 bool isParse2 = int.TryParse(Console.ReadLine(), out int num2);
 
-if (!isParse2 || num2 < 0)
+if (!isParse2)
 {
     Console.WriteLine("Incorrect input");
     return;
@@ -45,9 +45,20 @@ double PowerOf(int num1, int num2)
         return num1;
     }
 
-    for (int i = 2; i <= num2; i++)
+    if (num2 > 0)
     {
-        result = result * num1;
+        for (int i = 2; i <= num2; i++)
+        {
+            result = result * num1;
+        }
+        return result;
     }
-    return result;
+    else
+    {
+        for (int i = 2; i <= -num2; i++)
+        {
+            result = result * num1;
+        }
+        return 1/result;
+    }
 }
