@@ -14,10 +14,24 @@ public class Helper
         return array;
     }
 
-    public static void PrintArray(int[] array)
+    public static void PrintArray(double[] array)
     {
         string message = string.Join(", ", array);
         Console.WriteLine($"[{message}]");
+    }
+
+    public static double InputNumber()
+    {
+        bool isParsed = double.TryParse(Console.ReadLine(), out double number);
+
+        if (isParsed)
+        {
+            return number;
+        }
+        else
+        {
+            throw new ArgumentException("That's not a number");
+        }
     }
 
 
