@@ -34,6 +34,23 @@ public class Helper
         }
     }
 
+    double InputDoubleNumber(string str)
+    {
+        Console.WriteLine(str);
+
+        bool isParsed = double.TryParse(Console.ReadLine(), out double number);
+
+        if (isParsed)
+        {
+            return number;
+        }
+        else
+        {
+            Console.WriteLine("Incorrect input...");
+            return InputDoubleNumber(str);
+        }
+    }
+
     public static void Print2DArray(int[,] array)
     {
         for (int i = 0; i < array.GetLength(0); i++)
