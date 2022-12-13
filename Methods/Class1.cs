@@ -51,7 +51,36 @@ public class Helper
         }
     }
 
+    public static int InputIntNumber(string str)
+    {
+        Console.WriteLine(str);
+
+        bool isParsed = int.TryParse(Console.ReadLine(), out int number);
+
+        if (isParsed)
+        {
+            return number;
+        }
+        else
+        {
+            Console.WriteLine("Incorrect input...");
+            return InputIntNumber(str);
+        }
+    }
+
     public static void Print2DArray(int[,] array)
+    {
+        for (int i = 0; i < array.GetLength(0); i++)
+        {
+            for (int j = 0; j < array.GetLength(1); j++)
+            {
+                Console.Write($"{array[i, j]}    ");
+            }
+            Console.WriteLine();
+        }
+    }
+
+    public static void Print2DArray(double[,] array)
     {
         for (int i = 0; i < array.GetLength(0); i++)
         {
@@ -77,6 +106,22 @@ public class Helper
         }
         return array;
     }
+
+    public static double[,] GetRandomDouble2DArray(int m, int n)
+{
+    Random random = new Random();
+
+    double[,] array = new double[m, n];
+
+    for (int i = 0; i < array.GetLength(0); i++)
+    {
+        for (int j = 0; j < array.GetLength(1); j++)
+        {
+            array[i, j] = Math.Round(random.NextDouble() * (100 + 100) - 100, 2); // NextDouble() * (end - begin) + begin
+        }
+    }
+    return array;
+}
 
 
 }
