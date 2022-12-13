@@ -34,7 +34,7 @@ public class Helper
         }
     }
 
-    double InputDoubleNumber(string str)
+    public static double InputDoubleNumber(string str)
     {
         Console.WriteLine(str);
 
