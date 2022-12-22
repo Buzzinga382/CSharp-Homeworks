@@ -32,7 +32,7 @@ Print3DArrayWithIndices(resultArray);
 int[,,] GenerateRandom2DigitNotRepeating3DArray(int[,,] array)
 {
     Random random = new Random();
-    int[,,] newArray = Copy3DArray(array);
+    // int[,,] newArray = Copy3DArray(array);
     bool alreadyThere;
 
 
@@ -47,11 +47,11 @@ int[,,] GenerateRandom2DigitNotRepeating3DArray(int[,,] array)
 
                 for (int i = 0; i < x; i++)
                 {
-                    for (int j = 1; j < y; j++)
+                    for (int j = 0; j < y; j++)
                     {
                         for (int k = 0; k < z; k++)
                         {
-                            if (newArray[i, j, k] == newRandomValue)
+                            if (array[i, j, k] == newRandomValue)
                             {
                                 alreadyThere = true;
                             }
@@ -59,9 +59,9 @@ int[,,] GenerateRandom2DigitNotRepeating3DArray(int[,,] array)
                     }
                 }
 
-                if (!alreadyThere)
+                if (alreadyThere == false)
                 {
-                    newArray[x, y, z] = newRandomValue;
+                    array[x, y, z] = newRandomValue;
                     x++;
                     y++;
                     z++;
@@ -70,7 +70,7 @@ int[,,] GenerateRandom2DigitNotRepeating3DArray(int[,,] array)
         }
     }
 
-    return newArray;
+    return array;
 }
 
 

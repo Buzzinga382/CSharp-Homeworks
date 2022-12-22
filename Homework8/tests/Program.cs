@@ -56,3 +56,54 @@ int[] CopyArray(int[] arr)
     }
     return copiedArray;
 }
+
+
+
+
+int[,] array = new int[4, 4];
+array = CreateSpiralArray(array);
+
+Print2DArray(array);
+
+
+
+
+
+int[,] CreateSpiralArray(int[,] arr)
+{
+    Random random = new Random();
+
+    for (int i = 0; i < arr.GetLength(0) / 2 && i < arr.GetLength(1) / 2; i++)
+    {
+        for (int j = i; j < arr.GetLength(1) - i; j++)
+        {
+            arr[i, j] = random.Next(1, 5);
+        }
+        Print2DArray(array);
+        Console.WriteLine();
+
+        for (int k = i + 1; k < arr.GetLength(0) - i; k++)
+        {
+            arr[k, arr.GetLength(1) - 1 - i] = random.Next(1, 5);
+        }
+        Print2DArray(array);
+        Console.WriteLine();
+
+        for (int l = arr.GetLength(1) - i - 2; l >= 0; l--)
+        {
+            arr[arr.GetLength(0) - 1 - i, l] = random.Next(1, 5);
+        }
+        Print2DArray(array);
+        Console.WriteLine();
+
+
+        for (int m = arr.GetLength(0) - i - 2; m > 0 + i; m--)
+        {
+            arr[m, 0 + i] = random.Next(1, 5);
+        }
+        Print2DArray(array);
+        Console.WriteLine();
+    }
+    return arr;
+
+}
