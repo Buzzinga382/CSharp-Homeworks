@@ -51,6 +51,14 @@ void AlmostAckermannFunction(int m, int n, int members)
 
 int MtoThePowerOfN(int m, int n)
 {
+    if(m == 0)
+    {
+        return 0;
+    }
+    if(n == 0)
+    {
+        return 1;
+    }
     if (n == 1)
     {
         return m;
